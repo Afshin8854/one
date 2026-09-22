@@ -1,42 +1,282 @@
 <!doctype html>
-<html lang="fa" dir="rtl"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#35101f"><title>افشین ❤️ عاطفه</title>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#250814">
+<title>افشین ❤️ عاطفه</title>
 <style>
-:root{--bg:#2b0918;--bg2:#55162f;--card:#fffaf7;--txt:#3b1524;--mut:#805b68;--a:#cf5d7e;--line:#ead7de}
-*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:Tahoma,Arial,sans-serif;background:radial-gradient(circle at 20% 10%,#8f315044,transparent 30%),linear-gradient(150deg,var(--bg),var(--bg2));color:white}
-body:before,body:after{content:"♥";position:fixed;font-size:9rem;color:#ffffff0d;pointer-events:none}body:before{top:-35px;left:-25px}body:after{bottom:-45px;right:-20px}
-.app{width:min(100%,680px);margin:auto;padding:18px 14px 35px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.brand{font-weight:900}.music{width:42px;height:42px;border-radius:14px;border:1px solid #ffffff33;background:#ffffff12;color:#fff}
-.track{height:6px;background:#ffffff20;border-radius:99px;overflow:hidden}.bar{height:100%;width:0;background:linear-gradient(90deg,#ef9caf,#ffe9dc);transition:.25s}.prog{font-size:.8rem;color:#ffffffbb;margin:7px 2px 15px}
-.card{background:var(--card);color:var(--txt);border-radius:27px;min-height:480px;padding:27px 19px;box-shadow:0 24px 70px #11030a66;animation:in .3s ease}.ey{color:var(--a);font-weight:900;font-size:.86rem}h1,h2{line-height:1.55;margin:7px 0}h1{font-size:clamp(1.55rem,6vw,2.35rem)}h2{font-size:clamp(1.35rem,5vw,1.9rem)}.lead{color:var(--mut);line-height:1.9}.heart{text-align:center;font-size:5rem;margin:20px 0}
-.choices{display:grid;gap:10px;margin-top:18px}.ch,.btn{font:inherit;border:0;cursor:pointer}.ch{background:#fff;border:1px solid var(--line);padding:14px;border-radius:17px;text-align:right;color:var(--txt);display:flex;gap:10px;align-items:center;min-height:58px}.ch:hover{border-color:#cf5d7e88;transform:translateY(-1px)}.ch b{display:block}.ch small{display:block;color:var(--mut);margin-top:3px}
-.btn{min-height:50px;border-radius:15px;padding:0 17px;font-weight:900}.p{background:linear-gradient(135deg,var(--a),#ae365d);color:#fff}.s{background:#fff0f4;color:#8e3150}.g{background:#ffffff12;color:#fff;border:1px solid #ffffff22}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.input{width:100%;padding:13px;border:1px solid var(--line);border-radius:14px;font:inherit;background:white}.custom{display:grid;gap:9px;margin-top:13px}
-.nav{margin-top:12px}.nav .btn{min-height:44px}.ticket{margin-top:15px;border:1px dashed #b96d85;border-radius:22px;padding:18px;background:linear-gradient(#fff,#fff6f1)}.tt{text-align:center;font-weight:900;font-size:1.35rem}.sub{text-align:center;color:var(--mut);margin:5px 0 14px}.ti{display:flex;justify-content:space-between;gap:15px;padding:10px 0;border-bottom:1px solid var(--line)}.ti span{color:var(--mut)}.code{text-align:center;color:#9d3c5d;font-weight:900;letter-spacing:1px;margin-top:15px}.photo{aspect-ratio:16/9;border-radius:20px;background:linear-gradient(135deg,#f5dbe4,#ffefe5);display:grid;place-items:center;color:#90536a;margin-top:14px}
-.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;direction:ltr;margin-top:12px}.cb{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 4px;text-align:center}.cb b{display:block;color:#943250;font-size:1.25rem}.cb span{color:var(--mut);font-size:.7rem}.msg{background:#fff0f4;color:#6c2941;border-radius:17px;padding:14px;line-height:1.95;margin-top:15px}.center{text-align:center;padding-top:35px}.big{font-size:4.5rem}.note{font-size:.8rem;color:var(--mut);line-height:1.8}
-@media(min-width:600px){.card{padding:36px}.choices.two{grid-template-columns:1fr 1fr}}@keyframes in{from{opacity:.2;transform:translateY(8px)}to{opacity:1;transform:none}}
-</style></head><body>
-<main class="app"><div class="top"><div class="brand">افشین ❤️ عاطفه</div><button class="music" id="music">♫</button></div>
-<div class="track"><div class="bar" id="bar"></div></div><div class="prog" id="prog">شروع</div>
-<section class="card" id="c"></section><div class="nav"><button class="btn g" id="back">مرحله قبل</button></div></main>
+:root{
+  --bg:#210713;--bg2:#4d102a;--bg3:#771d43;
+  --card:#fffaf6;--text:#3d1624;--mut:#866270;
+  --rose:#d95f86;--rose2:#ad315b;--gold:#d5a865;
+  --cream:#fff1e5;--line:#ead8df;--white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;min-height:100vh;color:#fff;font-family:Tahoma,Arial,sans-serif;
+  background:
+    radial-gradient(circle at 10% 10%,rgba(255,188,207,.18),transparent 28%),
+    radial-gradient(circle at 85% 20%,rgba(213,168,101,.12),transparent 24%),
+    radial-gradient(circle at 50% 100%,rgba(217,95,134,.18),transparent 30%),
+    linear-gradient(145deg,var(--bg),var(--bg2) 55%,var(--bg3));
+  overflow-x:hidden;
+}
+.bg-orb{position:fixed;border-radius:50%;filter:blur(3px);pointer-events:none;opacity:.35}
+.o1{width:210px;height:210px;background:#d95f8655;top:-60px;left:-80px}
+.o2{width:170px;height:170px;background:#d5a86533;right:-60px;top:35%}
+.o3{width:220px;height:220px;background:#ffcadb22;bottom:-90px;left:20%}
+.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.h{position:absolute;bottom:-30px;color:#fff2;font-size:18px;animation:float 9s linear infinite}
+.h:nth-child(1){left:8%;animation-delay:0s}.h:nth-child(2){left:20%;animation-delay:2s;font-size:13px}.h:nth-child(3){left:42%;animation-delay:5s}.h:nth-child(4){left:64%;animation-delay:1s;font-size:12px}.h:nth-child(5){left:82%;animation-delay:4s;font-size:20px}
+.app{width:min(100%,720px);margin:auto;padding:18px 14px 42px;position:relative;z-index:2}
+.top{
+  display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;
+  padding:10px 12px;border:1px solid #ffffff22;background:#ffffff0d;
+  backdrop-filter:blur(14px);border-radius:18px;
+}
+.brand{font-weight:900;letter-spacing:.1px}.brand span{color:#f6b4c7}
+.music{
+  width:44px;height:44px;border-radius:15px;border:1px solid #ffffff2d;
+  background:linear-gradient(135deg,#ffffff1c,#ffffff0b);color:#fff;font-size:19px;
+}
+.track{height:7px;background:#ffffff17;border-radius:99px;overflow:hidden;box-shadow:inset 0 0 0 1px #ffffff0d}
+.bar{height:100%;width:0;background:linear-gradient(90deg,#ef8dad,#f7c8a9,#ffe9dc);transition:.35s ease;border-radius:99px}
+.prog{font-size:.78rem;color:#ffffffb8;margin:8px 4px 14px}
+.card{
+  position:relative;overflow:hidden;background:linear-gradient(180deg,#fffdfb,#fff8f3);
+  color:var(--text);border-radius:30px;min-height:500px;padding:28px 19px;
+  box-shadow:0 28px 80px #0f020966,0 1px 0 #ffffff inset;
+  border:1px solid #ffffff80;animation:in .35s ease;
+}
+.card:before{
+  content:"";position:absolute;inset:0 0 auto 0;height:5px;
+  background:linear-gradient(90deg,var(--rose),#eaa2b6,var(--gold));
+}
+.ey{color:var(--rose2);font-weight:900;font-size:.84rem;letter-spacing:.2px}
+h1,h2{line-height:1.55;margin:7px 0}h1{font-size:clamp(1.55rem,6vw,2.4rem)}h2{font-size:clamp(1.35rem,5vw,2rem)}
+.lead{color:var(--mut);line-height:1.95}
+.hero{
+  margin:20px auto 16px;width:130px;height:130px;border-radius:38px;
+  background:radial-gradient(circle at 35% 30%,#fff,#ffdbe6 52%,#e99ab3);
+  display:grid;place-items:center;font-size:58px;
+  box-shadow:0 18px 42px #d65f8530,0 0 0 8px #fff2f6;
+  transform:rotate(-2deg)
+}
+.hero:after{content:"✨";font-size:20px;position:absolute;transform:translate(48px,-48px)}
+.choices{display:grid;gap:11px;margin-top:18px}
+.ch,.btn{font:inherit;border:0;cursor:pointer;transition:.2s ease}
+.ch{
+  background:linear-gradient(180deg,#fff,#fffaf8);border:1px solid var(--line);
+  padding:14px;border-radius:18px;text-align:right;color:var(--text);
+  display:flex;gap:11px;align-items:center;min-height:62px;
+  box-shadow:0 8px 20px #5c1f3320;
+}
+.ch:hover,.ch:focus-visible{border-color:#cf5d7e99;transform:translateY(-2px);box-shadow:0 12px 25px #b74a7030;outline:none}
+.ch .ico{width:42px;height:42px;border-radius:13px;background:#fff0f4;display:grid;place-items:center;font-size:1.35rem;flex:0 0 auto}
+.ch b{display:block}.ch small{display:block;color:var(--mut);margin-top:3px}
+.btn{min-height:51px;border-radius:16px;padding:0 17px;font-weight:900}
+.btn:active{transform:scale(.98)}
+.p{background:linear-gradient(135deg,var(--rose),var(--rose2));color:#fff;box-shadow:0 10px 24px #b73b6340}
+.s{background:#fff0f4;color:#8e3150;border:1px solid #f0d4dd}
+.g{background:#ffffff12;color:#fff;border:1px solid #ffffff22}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.input{width:100%;padding:13px;border:1px solid var(--line);border-radius:14px;font:inherit;background:#fff;color:var(--text);outline:none}
+.input:focus{border-color:#d46a8b;box-shadow:0 0 0 4px #d95f8617}
+.custom{display:grid;gap:9px;margin-top:13px}
+.nav{margin-top:12px}.nav .btn{min-height:44px}
+
+/* Persian calendar */
+.cal{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:14px;box-shadow:0 14px 35px #5d1b2f18}
+.cal-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}
+.cal-title{text-align:center;font-weight:900;color:#73233f;line-height:1.5}
+.cal-nav{width:40px;height:40px;border:1px solid var(--line);background:#fff5f8;color:#8c3150;border-radius:12px;font-size:20px;cursor:pointer}
+.week,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.week div{text-align:center;font-size:.72rem;color:#987683;padding:5px 0}
+.day{
+  aspect-ratio:1/1;border:0;border-radius:12px;background:#fffaf9;color:#49202e;
+  cursor:pointer;font:inherit;font-weight:700;position:relative;
+}
+.day:hover{background:#fff0f4}.day.today:after{content:"";width:5px;height:5px;background:var(--gold);border-radius:50%;position:absolute;bottom:6px;left:50%;transform:translateX(-50%)}
+.day.sel{background:linear-gradient(135deg,var(--rose),var(--rose2));color:#fff;box-shadow:0 7px 16px #c4476e40}
+.day.empty{visibility:hidden}.cal-selected{margin-top:12px;padding:11px 12px;border-radius:13px;background:#fff4f7;color:#7c2b48;text-align:center;font-weight:800}
+
+/* ticket */
+.photo{
+  aspect-ratio:16/9;border-radius:24px;
+  background:
+    radial-gradient(circle at 20% 15%,#fff8,transparent 25%),
+    linear-gradient(135deg,#f5dbe4,#ffefe5);
+  display:grid;place-items:center;color:#90536a;margin-top:15px;
+  border:1px solid #edcbd6;box-shadow:0 14px 30px #6420361e;overflow:hidden;position:relative;
+}
+.photo:before{content:"♡";font-size:90px;color:#ffffff88;position:absolute}
+.photo span{position:relative;font-weight:900;background:#fff8;padding:9px 13px;border-radius:13px}
+.ticket{
+  position:relative;margin-top:16px;border:1px solid #d9a6b6;border-radius:24px;padding:20px 18px;
+  background:
+    radial-gradient(circle at 0 50%,transparent 11px,#fff9f5 12px),
+    radial-gradient(circle at 100% 50%,transparent 11px,#fff9f5 12px);
+  box-shadow:0 18px 40px #4f172a1f;
+}
+.ticket:after{content:"";position:absolute;left:16px;right:16px;top:74px;border-top:1px dashed #d8a6b5}
+.tt{text-align:center;font-weight:900;font-size:1.4rem;color:#70223e}.sub{text-align:center;color:var(--mut);margin:5px 0 27px}
+.ti{display:flex;justify-content:space-between;gap:15px;padding:11px 0;border-bottom:1px solid var(--line)}.ti span{color:var(--mut)}.ti b{text-align:left}
+.code{text-align:center;color:#9d3c5d;font-weight:900;letter-spacing:1px;margin-top:17px}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;direction:ltr;margin-top:12px}
+.cb{background:linear-gradient(180deg,#fff,#fff7f3);border:1px solid var(--line);border-radius:15px;padding:11px 4px;text-align:center;box-shadow:0 8px 18px #4e172618}
+.cb b{display:block;color:#943250;font-size:1.28rem}.cb span{color:var(--mut);font-size:.7rem}
+.msg{background:linear-gradient(135deg,#fff0f4,#fff7ef);color:#6c2941;border:1px solid #f1d7df;border-radius:19px;padding:15px;line-height:2;margin-top:15px}
+.center{text-align:center;padding-top:38px}.big{font-size:4.8rem}.note{font-size:.8rem;color:var(--mut);line-height:1.8}
+.spark{display:flex;justify-content:center;gap:9px;margin:15px 0;color:#c96987}
+@media(min-width:600px){.card{padding:38px}.choices.two{grid-template-columns:1fr 1fr}}
+@keyframes in{from{opacity:.2;transform:translateY(10px) scale(.99)}to{opacity:1;transform:none}}
+@keyframes float{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:1}100%{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="bg-orb o1"></div><div class="bg-orb o2"></div><div class="bg-orb o3"></div>
+<div class="hearts"><span class="h">♥</span><span class="h">♡</span><span class="h">♥</span><span class="h">♡</span><span class="h">♥</span></div>
+<main class="app">
+  <div class="top"><div class="brand">افشین <span>❤️</span> عاطفه</div><button class="music" id="music" aria-label="پخش موسیقی">♫</button></div>
+  <div class="track"><div class="bar" id="bar"></div></div>
+  <div class="prog" id="prog">شروع</div>
+  <section class="card" id="c"></section>
+  <div class="nav"><button class="btn g" id="back">مرحله قبل</button></div>
+</main>
 <script>
-var K="aa-date-v1",st=JSON.parse(localStorage.getItem(K)||"null")||{step:0,ok:null,date:"",time:"",activity:"",bring:"",after:""};
+var K="aa-date-v2";
+var st=JSON.parse(localStorage.getItem(K)||"null")||{step:0,ok:null,date:"",time:"",activity:"",bring:"",after:""};
 var c=document.getElementById("c"),bar=document.getElementById("bar"),prog=document.getElementById("prog"),back=document.getElementById("back");
-function save(){localStorage.setItem(K,JSON.stringify(st))}function go(n){st.step=n;save();render()}function btn(e,t,s,f){var b=document.createElement("button");b.className="ch";b.innerHTML="<span style='font-size:1.35rem'>"+e+"</span><span><b>"+t+"</b>"+(s?"<small>"+s+"</small>":"")+"</span>";b.onclick=f;return b}
-function head(n,t,l){c.innerHTML="<div class='ey'>مرحله "+n+"</div><h2>"+t+"</h2><p class='lead'>"+l+"</p>"}function addChoices(arr,key,next){var w=document.createElement("div");w.className="choices two";arr.forEach(function(x){w.appendChild(btn(x[0],x[1],x[2]||"",function(){st[key]=x[1];go(next)}))});c.appendChild(w)}
-function intro(){c.innerHTML="<div class='ey'>فقط برای عاطفه ❤️</div><h1>عاطفه، یه برنامه کوچولو برای دوتامون دارم... میای؟ ❤️</h1><p class='lead'>افشین یه دعوت کوچیک برات ساخته؛ بقیه‌ش رو خودت می‌چینی.</p><div class='heart'>💌</div><div class='row'><button class='btn p' id='yes'>آره 😍</button><button class='btn s' id='no'>نه</button></div>";yes.onclick=function(){st.ok=true;save();c.innerHTML="<div class='center'><div class='big'>🥰❤️</div><h2>پس قراره بریم!</h2><p class='lead'>حالا بیا با هم جزئیاتش رو بچینیم.</p></div>";setTimeout(function(){go(1)},700)};no.onclick=function(){st.ok=false;save();c.innerHTML="<div class='center'><div class='big'>🙂❤️</div><h2>باشه خانوم</h2><p class='lead'>هیچ اجباری نیست. پیشنهاد افشین سر جاشه؛ هر وقت دلت خواست دوباره برگرد.</p><button class='btn s' id='again'>برگردیم</button></div>";again.onclick=function(){st.ok=null;go(0)}}}
-function dateStep(){head(1,"چه روزی بریم؟","یه تاریخی رو انتخاب کن که حال دوتامون خوب باشه.");c.innerHTML+="<div class='custom'><input class='input' id='date' type='date' value='"+st.date+"'><button class='btn p' id='dateok'>این روز خوبه ❤️</button></div>";dateok.onclick=function(){if(!date.value)return;st.date=date.value;go(2)}}
-function timeStep(){head(2,"چه ساعتی بیشتر دوست داری؟","قرارمون رو به وقت خودمون تنظیم کنیم.");addChoices([["🌤️","صبح","۱۰:۳۰"],["☀️","ظهر","۱۳:۳۰"],["🌇","عصر","۱۷:۳۰"],["🌙","شب","۲۰:۳۰"]],"time",3);c.innerHTML+="<div class='custom'><input class='input' id='tm' type='time'><button class='btn s' id='tmok'>ساعت دلخواه</button></div>";tmok.onclick=function(){if(!tm.value)return;st.time=tm.value;go(3)}}
-function generic(n,title,lead,arr,key,next,ph){head(n,title,lead);addChoices(arr,key,next);var d=document.createElement("div");d.className="custom";d.innerHTML="<input class='input' id='ct' maxlength='60' placeholder='"+ph+"'><button class='btn s' id='ctok'>پیشنهاد خودم</button>";c.appendChild(d);ctok.onclick=function(){if(!ct.value.trim())return;st[key]=ct.value.trim();go(next)}}
+var calAnchor=new Date();
+
+function save(){localStorage.setItem(K,JSON.stringify(st))}
+function go(n){st.step=n;save();render()}
+function faNum(x){return String(x).replace(/\d/g,function(d){return "۰۱۲۳۴۵۶۷۸۹"[d]})}
+function enNum(x){return String(x).replace(/[۰-۹]/g,function(d){return "۰۱۲۳۴۵۶۷۸۹".indexOf(d)}).replace(/[٠-٩]/g,function(d){return "٠١٢٣٤٥٦٧٨٩".indexOf(d)})}
+function ymd(d){var y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,"0"),day=String(d.getDate()).padStart(2,"0");return y+"-"+m+"-"+day}
+function localDate(v){var p=v.split("-").map(Number);return new Date(p[0],p[1]-1,p[2],12,0,0)}
+function pparts(d){
+  var parts=new Intl.DateTimeFormat("fa-IR-u-ca-persian",{year:"numeric",month:"numeric",day:"numeric"}).formatToParts(d),o={};
+  parts.forEach(function(p){if(p.type==="year")o.y=+enNum(p.value);if(p.type==="month")o.m=+enNum(p.value);if(p.type==="day")o.d=+enNum(p.value)});
+  return o;
+}
+function pMonthName(d){return new Intl.DateTimeFormat("fa-IR-u-ca-persian",{month:"long"}).format(d)}
+function faDate(v){
+  if(!v)return "";
+  try{return new Intl.DateTimeFormat("fa-IR-u-ca-persian",{weekday:"long",year:"numeric",month:"long",day:"numeric"}).format(localDate(v))}
+  catch(e){return v}
+}
+function btn(e,t,s,f){
+  var b=document.createElement("button");b.className="ch";
+  b.innerHTML="<span class='ico'>"+e+"</span><span><b>"+t+"</b>"+(s?"<small>"+s+"</small>":"")+"</span>";
+  b.onclick=f;return b
+}
+function head(n,t,l){c.innerHTML="<div class='ey'>مرحله "+faNum(n)+"</div><h2>"+t+"</h2><p class='lead'>"+l+"</p>"}
+function addChoices(arr,key,next){
+  var w=document.createElement("div");w.className="choices two";
+  arr.forEach(function(x){w.appendChild(btn(x[0],x[1],x[2]||"",function(){st[key]=x[1];go(next)}))});c.appendChild(w)
+}
+
+function intro(){
+  c.innerHTML="<div class='ey'>فقط برای عاطفه ❤️</div><h1>عاطفه، یه برنامه کوچولو برای دوتامون دارم... میای؟ ❤️</h1><p class='lead'>افشین یه دعوت کوچیک برات ساخته؛ بقیه‌ش رو خودت می‌چینی.</p><div class='hero'>💌</div><div class='spark'>✦ ♥ ✦</div><div class='row'><button class='btn p' id='yes'>آره 😍</button><button class='btn s' id='no'>نه</button></div>";
+  yes.onclick=function(){st.ok=true;save();c.innerHTML="<div class='center'><div class='big'>🥰</div><h2>پس قراره بریم! ❤️</h2><p class='lead'>حالا بیا با هم جزئیاتش رو بچینیم.</p><div class='spark'>✦ ♥ ✦ ♥ ✦</div></div>";setTimeout(function(){go(1)},850)};
+  no.onclick=function(){st.ok=false;save();c.innerHTML="<div class='center'><div class='big'>🙂❤️</div><h2>باشه خانوم</h2><p class='lead'>هیچ اجباری نیست. پیشنهاد افشین سر جاشه؛ هر وقت دلت خواست دوباره برگرد.</p><button class='btn s' id='again'>برگردیم</button></div>";again.onclick=function(){st.ok=null;go(0)}}
+}
+
+function firstOfPersianMonth(anchor){
+  var d=new Date(anchor);d.setHours(12,0,0,0);
+  for(var i=0;i<35;i++){if(pparts(d).d===1)return d;d.setDate(d.getDate()-1)}
+  return new Date(anchor)
+}
+function monthDates(anchor){
+  var first=firstOfPersianMonth(anchor),p=pparts(first),arr=[],d=new Date(first);
+  for(var i=0;i<32;i++){var q=pparts(d);if(q.m!==p.m||q.y!==p.y)break;arr.push(new Date(d));d.setDate(d.getDate()+1)}
+  return {first:first,dates:arr,p:p,next:d}
+}
+function renderCalendar(){
+  var box=document.getElementById("calbox"); if(!box)return;
+  var info=monthDates(calAnchor),first=info.first,dates=info.dates,p=info.p;
+  var offset=(first.getDay()+1)%7;
+  var html="<div class='cal-head'><button class='cal-nav' id='nextm' aria-label='ماه بعد'>‹</button><div class='cal-title'>"+pMonthName(first)+" "+faNum(p.y)+"</div><button class='cal-nav' id='prevm' aria-label='ماه قبل'>›</button></div>";
+  html+="<div class='week'><div>ش</div><div>ی</div><div>د</div><div>س</div><div>چ</div><div>پ</div><div>ج</div></div><div class='days'>";
+  for(var j=0;j<offset;j++)html+="<button class='day empty' tabindex='-1'>0</button>";
+  var today=ymd(new Date());
+  dates.forEach(function(d){
+    var pd=pparts(d),val=ymd(d),cls="day"+(val===today?" today":"")+(val===st.date?" sel":"");
+    html+="<button class='"+cls+"' data-date='"+val+"'>"+faNum(pd.d)+"</button>";
+  });
+  html+="</div><div class='cal-selected'>"+(st.date?"انتخاب شما: "+faDate(st.date):"یک روز قشنگ رو انتخاب کن ❤️")+"</div>";
+  box.innerHTML=html;
+  box.querySelectorAll("[data-date]").forEach(function(b){b.onclick=function(){st.date=b.dataset.date;save();renderCalendar();document.getElementById("dateok").disabled=false}});
+  document.getElementById("prevm").onclick=function(){var d=new Date(first);d.setDate(d.getDate()-1);calAnchor=d;renderCalendar()};
+  document.getElementById("nextm").onclick=function(){calAnchor=info.next;renderCalendar()};
+}
+function dateStep(){
+  head(1,"چه روزی بریم؟","تقویم کاملاً شمسیه؛ هر روزی که دوست داری انتخاب کن.");
+  var w=document.createElement("div");w.id="calbox";w.className="cal";c.appendChild(w);
+  var b=document.createElement("button");b.className="btn p";b.id="dateok";b.style="width:100%;margin-top:12px";b.textContent="این روز خوبه ❤️";b.disabled=!st.date;b.onclick=function(){if(st.date)go(2)};c.appendChild(b);
+  calAnchor=st.date?localDate(st.date):new Date();renderCalendar();
+}
+function timeStep(){
+  head(2,"چه ساعتی بیشتر دوست داری؟","قرارمون رو به وقت خودمون تنظیم کنیم.");
+  addChoices([["🌤️","۱۰:۳۰","صبح"],["☀️","۱۳:۳۰","ظهر"],["🌇","۱۷:۳۰","عصر"],["🌙","۲۰:۳۰","شب"]],"time",3);
+  c.innerHTML+="<div class='custom'><input class='input' id='tm' type='time'><button class='btn s' id='tmok'>ساعت دلخواه</button></div>";
+  tmok.onclick=function(){if(!tm.value)return;st.time=tm.value;go(3)}
+}
+function generic(n,title,lead,arr,key,next,ph){
+  head(n,title,lead);addChoices(arr,key,next);
+  var d=document.createElement("div");d.className="custom";
+  d.innerHTML="<input class='input' id='ct' maxlength='60' placeholder='"+ph+"'><button class='btn s' id='ctok'>پیشنهاد خودم</button>";
+  c.appendChild(d);ctok.onclick=function(){if(!ct.value.trim())return;st[key]=ct.value.trim();go(next)}
+}
 function act(){generic(3,"چه جور قراری بریم؟","یکی رو انتخاب کن یا پیشنهاد خودت رو بنویس.",[["☕","کافه","یه جای دنج"],["🍽️","شام دونفره","آروم و خوشمزه"],["🎬","فیلم","با انتخاب تو"],["🚶","قدم زدن","بدون عجله"],["🚗","دور دور","با موزیک"],["🌌","شب‌گردی","یه شب متفاوت"]],"activity",4,"مثلاً بستنی و قدم زدن")}
 function bring(){generic(4,"افشین چی با خودش بیاره؟ 😄","این یکی با تو؛ من انجامش می‌دم.",[["🌹","گل","همیشه قشنگ"],["🍫","یه چیز شیرین","برای بعد"],["🎵","پلی‌لیست مخصوص","آهنگ‌های خودمون"],["🎁","سورپرایز","نپرس چی 😄"],["❤️","فقط خودش","همین کافیه"]],"bring",5,"مثلاً یه یادداشت دست‌نویس")}
 function after(){generic(5,"بعدش چی؟","قرارمون می‌تونه ادامه قشنگی هم داشته باشه.",[["🍰","دسر","یه پایان شیرین"],["🌌","تماشای آسمون","اگر هوا خوب بود"],["🚗","یه دور طولانی","بدون مقصد"],["☕","یه جای دیگه","ادامه بدیم"],["🚶","قدم زدن","آروم و طولانی"],["😄","هرچی پیش اومد","برنامه آزاد"]],"after",6,"مثلاً بریم یه جای خاطره‌انگیز")}
-function faDate(v){if(!v)return"";try{return new Intl.DateTimeFormat("fa-IR",{weekday:"long",year:"numeric",month:"long",day:"numeric"}).format(new Date(v+"T12:00:00"))}catch(e){return v}}
-function start(){if(!st.date||!st.time)return null;return new Date(st.date+"T"+st.time+":00")}function countdown(){var t=start(),d=t?Math.max(0,t-Date.now()):0;return [Math.floor(d/86400000),Math.floor(d%86400000/3600000),Math.floor(d%3600000/60000),Math.floor(d%60000/1000)]}
-function ticket(){var x=countdown();c.innerHTML="<div class='ey'>قرارمون قطعی شد ❤️</div><h2>بلیت قرار افشین و عاطفه</h2><div class='photo'>📷 عکس دونفره‌مون اینجا میاد</div><div class='ticket' id='pass'><div class='tt'>DATE PASS · قرار دونفره</div><div class='sub'>افشین ❤️ عاطفه</div><div class='ti'><span>روز</span><b>"+faDate(st.date)+"</b></div><div class='ti'><span>ساعت</span><b>"+st.time+"</b></div><div class='ti'><span>قرار</span><b>"+st.activity+"</b></div><div class='ti'><span>افشین میاره</span><b>"+st.bring+"</b></div><div class='ti'><span>بعدش</span><b>"+st.after+"</b></div><div class='code'>ADMIT TWO · A♥A</div></div><p class='lead' style='text-align:center'>تا قرارمون مونده</p><div class='cd' id='cd'></div><div class='msg'>عاطفه جان، قرار نیست این فقط یک برنامه باشه؛ می‌خوام هر بار که این صفحه رو می‌بینی، یادت بیاد چقدر کنار تو بودن برای من قشنگه. ❤️ — افشین</div><div class='row'><button class='btn p' id='cal'>اضافه به تقویم</button><button class='btn s' id='share'>اشتراک‌گذاری ❤️</button><button class='btn s' id='pic'>ذخیره بلیت</button><button class='btn s' id='reset'>از اول</button></div><p class='note'>نسخه فعلی بدون عکس و آهنگ شخصی است؛ بعداً می‌تونیم هر دو را اضافه کنیم.</p>";tick();cal.onclick=ics;share.onclick=shareIt;pic.onclick=picIt;reset.onclick=function(){localStorage.removeItem(K);location.reload()}}
-function tick(){var e=document.getElementById("cd");if(!e)return;var x=countdown(),l=["روز","ساعت","دقیقه","ثانیه"];e.innerHTML=x.map(function(v,i){return"<div class='cb'><b>"+String(v).padStart(2,"0")+"</b><span>"+l[i]+"</span></div>"}).join("");setTimeout(tick,1000)}
-function ics(){var s=start();if(!s)return;var e=new Date(s.getTime()+7200000),f=function(d){return d.toISOString().replace(/[-:]/g,"").replace(/\.\d{3}Z$/,"Z")};var data="BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nDTSTART:"+f(s)+"\nDTEND:"+f(e)+"\nSUMMARY:قرار افشین و عاطفه ❤️\nDESCRIPTION:"+st.activity+" | "+st.bring+" | "+st.after+"\nEND:VEVENT\nEND:VCALENDAR";var b=new Blob([data],{type:"text/calendar"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="afshin-atefeh-date.ics";a.click()}
-async function shareIt(){var t="قرار افشین و عاطفه ❤️\n"+faDate(st.date)+" ساعت "+st.time+"\n"+st.activity+" · "+st.bring+" · "+st.after;try{if(navigator.share)await navigator.share({title:"قرار افشین و عاطفه",text:t,url:location.href});else{await navigator.clipboard.writeText(t+"\n"+location.href);alert("کپی شد ❤️")}}catch(e){}}
-function picIt(){var cv=document.createElement("canvas");cv.width=1080;cv.height=1200;var q=cv.getContext("2d"),g=q.createLinearGradient(0,0,1080,1200);g.addColorStop(0,"#35101f");g.addColorStop(1,"#792544");q.fillStyle=g;q.fillRect(0,0,1080,1200);q.fillStyle="#fff8f2";q.fillRect(80,80,920,1040);q.textAlign="center";q.direction="rtl";q.fillStyle="#651f3b";q.font="bold 56px Tahoma";q.fillText("قرار افشین و عاطفه ❤️",540,180);q.font="34px Tahoma";q.fillText(faDate(st.date)+" — "+st.time,540,260);q.font="bold 38px Tahoma";q.fillText(st.activity,540,430);q.fillText(st.bring,540,560);q.fillText(st.after,540,690);q.fillStyle="#b83f67";q.fillText("A♥A · ADMIT TWO",540,980);var a=document.createElement("a");a.download="date-pass.png";a.href=cv.toDataURL("image/png");a.click()}
-function render(){var p=Math.min(st.step,6);bar.style.width=(p/6*100)+"%";prog.textContent=st.step===0?"شروع":"مرحله "+st.step+" از 6";back.style.visibility=st.step>0&&st.step<6?"visible":"hidden";[intro,dateStep,timeStep,act,bring,after,ticket][st.step]()}
-back.onclick=function(){if(st.step>0)go(st.step-1)};document.getElementById("music").onclick=function(){alert("آهنگ مشترکتون رو که بفرستی، همین دکمه پخشش می‌کنه 🎵")};render();
-</script></body></html>
+
+function start(){if(!st.date||!st.time)return null;return new Date(st.date+"T"+st.time+":00")}
+function countdown(){var t=start(),d=t?Math.max(0,t-Date.now()):0;return [Math.floor(d/86400000),Math.floor(d%86400000/3600000),Math.floor(d%3600000/60000),Math.floor(d%60000/1000)]}
+function faTime(v){return faNum(v||"")}
+
+function ticket(){
+  c.innerHTML="<div class='ey'>قرارمون قطعی شد ❤️</div><h2>بلیت قرار افشین و عاطفه</h2><div class='photo'><span>📷 عکس دونفره‌مون اینجا میاد</span></div><div class='ticket' id='pass'><div class='tt'>بلیت قرار دونفره</div><div class='sub'>افشین ❤️ عاطفه</div><div class='ti'><span>📅 روز</span><b>"+faDate(st.date)+"</b></div><div class='ti'><span>🕰 ساعت</span><b>"+faTime(st.time)+"</b></div><div class='ti'><span>💞 قرار</span><b>"+st.activity+"</b></div><div class='ti'><span>🎁 افشین میاره</span><b>"+st.bring+"</b></div><div class='ti'><span>✨ بعدش</span><b>"+st.after+"</b></div><div class='code'>A ♥ A · فقط برای دو نفر</div></div><p class='lead' style='text-align:center'>تا قرارمون مونده</p><div class='cd' id='cd'></div><div class='msg'>عاطفه جان، قرار نیست این فقط یک برنامه باشه؛ می‌خوام هر بار که این صفحه رو می‌بینی، یادت بیاد چقدر کنار تو بودن برای من قشنگه. ❤️ — افشین</div><div class='row'><button class='btn p' id='cal'>اضافه به تقویم</button><button class='btn s' id='share'>اشتراک‌گذاری ❤️</button><button class='btn s' id='pic'>ذخیره بلیت</button><button class='btn s' id='reset'>از اول</button></div><p class='note'>عکس و آهنگ شخصی هنوز به لینک عمومی اضافه نشده‌اند.</p>";
+  tick();cal.onclick=ics;share.onclick=shareIt;pic.onclick=picIt;reset.onclick=function(){localStorage.removeItem(K);location.reload()}
+}
+function tick(){
+  var e=document.getElementById("cd");if(!e)return;var x=countdown(),l=["روز","ساعت","دقیقه","ثانیه"];
+  e.innerHTML=x.map(function(v,i){return"<div class='cb'><b>"+faNum(String(v).padStart(2,"0"))+"</b><span>"+l[i]+"</span></div>"}).join("");
+  setTimeout(tick,1000)
+}
+function ics(){
+  var s=start();if(!s)return;var e=new Date(s.getTime()+7200000),f=function(d){return d.toISOString().replace(/[-:]/g,"").replace(/\.\d{3}Z$/,"Z")};
+  var data="BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nDTSTART:"+f(s)+"\nDTEND:"+f(e)+"\nSUMMARY:قرار افشین و عاطفه ❤️\nDESCRIPTION:"+st.activity+" | "+st.bring+" | "+st.after+"\nEND:VEVENT\nEND:VCALENDAR";
+  var b=new Blob([data],{type:"text/calendar"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="afshin-atefeh-date.ics";a.click()
+}
+async function shareIt(){
+  var t="قرار افشین و عاطفه ❤️\n"+faDate(st.date)+" ساعت "+faTime(st.time)+"\n"+st.activity+" · "+st.bring+" · "+st.after;
+  try{if(navigator.share)await navigator.share({title:"قرار افشین و عاطفه",text:t,url:location.href});else{await navigator.clipboard.writeText(t+"\n"+location.href);alert("کپی شد ❤️")}}catch(e){}
+}
+function picIt(){
+  var cv=document.createElement("canvas");cv.width=1080;cv.height=1200;var q=cv.getContext("2d"),g=q.createLinearGradient(0,0,1080,1200);
+  g.addColorStop(0,"#2b0918");g.addColorStop(.55,"#5d1735");g.addColorStop(1,"#8f3150");q.fillStyle=g;q.fillRect(0,0,1080,1200);
+  q.fillStyle="#fff8f2";q.beginPath();q.roundRect(75,75,930,1050,38);q.fill();
+  q.textAlign="center";q.direction="rtl";q.fillStyle="#651f3b";q.font="bold 58px Tahoma";q.fillText("قرار افشین و عاطفه ❤️",540,185);
+  q.font="34px Tahoma";q.fillText(faDate(st.date)+" — "+faTime(st.time),540,265);
+  q.fillStyle="#b83f67";q.font="bold 40px Tahoma";q.fillText(st.activity,540,450);q.fillText(st.bring,540,585);q.fillText(st.after,540,720);
+  q.fillStyle="#8f3150";q.font="bold 34px Tahoma";q.fillText("A ♥ A · فقط برای دو نفر",540,1010);
+  var a=document.createElement("a");a.download="date-pass.png";a.href=cv.toDataURL("image/png");a.click()
+}
+function render(){
+  var p=Math.min(st.step,6);bar.style.width=(p/6*100)+"%";
+  prog.textContent=st.step===0?"شروع":"مرحله "+faNum(st.step)+" از "+faNum(6);
+  back.style.visibility=st.step>0&&st.step<6?"visible":"hidden";
+  [intro,dateStep,timeStep,act,bring,after,ticket][st.step]()
+}
+back.onclick=function(){if(st.step>0)go(st.step-1)};
+document.getElementById("music").onclick=function(){alert("آهنگ مشترکتون رو که بفرستی، همین دکمه پخشش می‌کنه 🎵")};
+render();
+</script>
+</body>
+</html>
